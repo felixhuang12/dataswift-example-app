@@ -43,5 +43,6 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^13.1.1",
     "prettier": "^2.2.1"
-  }
+  },
+  "proxy": "http://fyh5njwunonlojuvyrkxd.hubat.net/api/v2.6/data/dataswiftexample/my-notes"
 }

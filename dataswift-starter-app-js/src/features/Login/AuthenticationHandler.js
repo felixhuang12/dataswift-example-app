@@ -13,21 +13,21 @@ import { getParameterByName } from '../../utils/windowHelper';
  * If error is attached to the parameters, navigates the user back to the Login Page.
  */
 function AuthenticationHandler() {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = getParameterByName('token');
     const error = getParameterByName('error');
 
     if (error) {
-      history.push('/login');
+      navigate('/login');
     }
 
     if (token) {
       sessionStorage.setItem('token', token);
-      history.push('/');
+      navigate('/');
     }
-  }, [history]);
+  }, [navigate]);
 
   return <div>Loading...</div>;
 }
